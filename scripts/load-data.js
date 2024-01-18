@@ -1,10 +1,13 @@
 import { Repo } from "../components/repo";
+import { SelectPageCount } from "../components/select-per-page";
 import { UserInfo } from "../components/user-info";
 
 export function loadData() {
   document.addEventListener("DOMContentLoaded", function () {
     const reposContainer = document.getElementById("reposContainer");
     const userContainer = document.getElementById("userContainer");
+    const selectContainer = document.getElementById("selectContainer");
+
     const loader = document.getElementById("loader");
 
     // Replace 'username' with the GitHub username you want to fetch data for
@@ -18,6 +21,7 @@ export function loadData() {
         // Hide loader after data is fetched
         loader.style.display = "none";
         userContainer.innerHTML = UserInfo(user);
+        selectContainer.innerHTML = SelectPageCount();
 
         repos.forEach((repo) => {
           const repoElement = document.createElement("div");
