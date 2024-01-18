@@ -1,0 +1,120 @@
+/* default classes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  padding: 1rem;
+}
+
+/* helper classes */
+.flex {
+  display: flex;
+}
+.mx {
+  margin-inline: 0.25rem;
+}
+.my {
+  margin-block: 0.25rem;
+}
+
+.col {
+  flex-direction: column;
+}
+.gap {
+  gap: 1rem;
+}
+
+/* styles.css */
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* custom styles */
+.avatar {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user-cont {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.user-info {
+  justify-content: flex-start;
+
+  p {
+    margin-block: 0.35rem;
+  }
+
+  .pin {
+    width: 1rem;
+    margin-right: 0.25rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  padding: 2rem;
+  gap: 2rem;
+
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0.5rem;
+  }
+}
+
+.repo {
+  border: 1px solid rgba(50, 50, 50, 0.2);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(50, 50, 50, 0.15);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+
+  .visibility {
+    margin-top: 0.5rem;
+    background-color: rgba(50, 50, 50, 0.45);
+    width: fit-content;
+    padding: 0.35rem 0.5rem;
+    border-radius: 0.5rem;
+    color: #fff;
+  }
+
+  .bottom-tags {
+    margin-top: 1rem;
+    color: #fff;
+    font-size: 0.85rem;
+
+    span {
+      background-color: rgba(50, 50, 50, 0.85);
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.5rem;
+    }
+  }
+}
