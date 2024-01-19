@@ -124,4 +124,20 @@ body {
       border-radius: 0.5rem;
     }
   }
+
+  .repo_forks {
+    justify-content: space-between;
+  }
+
+  .topics {
+    gap: 1rem;
+    margin-top: 0.5rem;
+
+    .topic {
+      font-size: 0.8rem;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 0.25rem 0.7rem;
+      border-radius: 0.3rem;
+    }
+  }
 }

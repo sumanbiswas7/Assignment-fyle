@@ -61,6 +61,18 @@ function renderRepos(repos) {
     repoElement.classList.add("repo");
     repoElement.innerHTML = Repo(repo);
     reposContainer.appendChild(repoElement);
+
+    const topicsContainer = document.createElement("div");
+    topicsContainer.classList.add("flex", "topics");
+
+    repo.topics?.forEach((topic) => {
+      const topicElement = document.createElement("span");
+      topicElement.classList.add("topic");
+      topicElement.innerText = topic;
+      topicsContainer.appendChild(topicElement);
+    });
+
+    repoElement.append(topicsContainer);
   });
 }
 
